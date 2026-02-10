@@ -1,16 +1,12 @@
-# Weather Provider
+🌤️ Weather Provider: SkyStack Pro
+A premium, full-stack MERN climate engine featuring real-time data, user authentication, and advanced weather interpretation logic.
 
-A full-stack weather application with user authentication, saved cities, and search history tracking.
-
-## Overview
-
-Weather Provider is a full-stack MERN application that allows users to search for weather information, save their favorite cities, and track their search history. The application features secure user authentication with JWT tokens and password encryption.
-
-## Project Structure
-
-```
+🚀 Overview
+SkyStack Pro is a high-performance application that allows users to search for live weather data globally. Beyond simple numbers, it interprets climate data to provide user safety advice and features a professional-grade "Midnight Glass" UI.
+'''
+📂 Project Structure
 weather-provider/
-├── backend/                 # Express.js REST API
+├── backend/                # Express.js REST API
 │   ├── src/
 │   │   ├── controllers/    # Route handlers
 │   │   ├── database/       # MongoDB connection
@@ -19,65 +15,52 @@ weather-provider/
 │   │   └── schemas/        # Mongoose schemas
 │   ├── index.js            # Server entry point
 │   └── package.json
-└── client/                 # React + Vite frontend
+└── sky-stack/              # React 19 + Vite Frontend (MUI)
     ├── src/
-    │   ├── App.jsx         # Main component
+    │   ├── App.jsx         # Main UI & Climate Logic
     │   ├── main.jsx        # Entry point
     │   └── assets/         # Static assets
     ├── vite.config.js
     └── package.json
-```
+✨ Key Features
+💻 SkyStack Pro Frontend (New!)
+Live API Integration: Real-time fetching from OpenWeatherMap.
 
-## Features
+''' 
 
-### Backend
-- **User Authentication**: Sign up and login with JWT token support
-- **User Management**: Profile management, password changes, account deletion
-- **Saved Cities**: Add/remove cities to personal favorites
-- **Search History**: Track and manage viewed weather history
-- **Security**: Password encryption with bcrypt, JWT-based protected routes
-- **CORS Support**: Configured for frontend communication
-- **Error Handling**: Centralized error handler with environment-based logging
+Premium UI/UX: Midnight dark theme with Glassmorphism, radial gradients, and responsive Material UI design.
 
-### Frontend
-- **React 19** with modern hooks
-- **Vite** for fast development and optimized builds
-- **ESLint** for code quality
+Climate Interpretation: Intelligent logic that categorizes weather (e.g., "Extreme Heat", "Perfect Climate") and provides safety advice.
 
-## Tech Stack
+Micro-animations: Smooth transitions using MUI Fade and Paper components.
 
-### Backend
-- **Node.js** - Runtime environment
-- **Express.js** - Web framework
-- **MongoDB** - Database (via Mongoose)
-- **JWT** - Authentication tokens
-- **bcrypt** - Password hashing
-- **CORS** - Cross-origin resource sharing
+⚙️ Backend Logic
+User Authentication: Secure Sign-up/Login with JWT tokens and bcrypt encryption.
 
-### Frontend
-- **React 19** - UI library
-- **Vite** - Build tool and dev server
-- **ESLint** - Code linting
+Data Persistence: MongoDB integration to save favorite cities and search history.
 
-## API Endpoints
+Protected Routes: Middleware to ensure weather history is tied to specific user accounts.
 
-### Authentication
-- `POST /api/auth/signup` - Create new account
-- `POST /api/auth/login` - Login and receive JWT token
+Health Checks: API status monitoring.
 
-### User Profile (Protected)
-- `GET /api/auth/profile` - Get user profile
-- `PUT /api/auth/profile` - Update user profile
-- `PUT /api/auth/change-password` - Change password
-- `DELETE /api/auth/delete-account` - Delete user account
+🛠️ Tech Stack
+Frontend: React 19, Vite, Material UI (MUI), MUI Icons.
 
-### Saved Cities (Protected)
-- `PUT /api/auth/add-to-saved-cities` - Add city to favorites
-- `PUT /api/auth/remove-from-saved-cities` - Remove city from favorites
+Backend: Node.js, Express.js.
 
-### Search History (Protected)
-- `PUT /api/auth/add-to-history` - Add to viewed history
-- `PUT /api/auth/remove-from-history` - Remove from history
+Database: MongoDB (Mongoose).
 
-### Health Check
-- `GET /api/health` - Server status
+Security: JWT, bcrypt, CORS.
+
+📡 API Endpoints
+Authentication
+POST /api/auth/signup - Create new account
+
+POST /api/auth/login - Login and receive JWT token
+
+User Data (Protected)
+GET /api/auth/profile - Get user profile
+
+PUT /api/auth/add-to-saved-cities - Save a favorite city
+
+PUT /api/auth/add-to-history - Track viewed weather data
