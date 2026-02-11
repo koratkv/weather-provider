@@ -2,7 +2,7 @@ require("dotenv").config();
 const openweathermapAPI = process.env.OPENWEATHER_API;
 
 exports.climateRouter = async (request, response) => {
-    const { city } = request.params;
+    const { city } = request.body;
 
     try {
         // Gets the latitude and longitude using city names as input
