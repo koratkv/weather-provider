@@ -25,7 +25,7 @@ const databaseURL = process.env.MONGODB_URL;
 const PORT = process.env.PORT || 3000;
 
 // Routes
-app.use("/api/auth", userRoutes);
+app.use("/api/user", userRoutes);
 app.use("/api/climate", climateRoutes);
 
 // Health Check Endpoint
